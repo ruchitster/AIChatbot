@@ -1,0 +1,122 @@
+:root {
+  --bg: #0b0f19;
+  --panel: #111827;
+  --panel-2: #1f2937;
+  --text: #d1d5db;
+  --text-h: #ffffff;
+  --border: #2a2f3a;
+  --accent: #3b82f6;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui;
+}
+
+#root {
+  height: 100vh;
+}
+
+/* LAYOUT */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 280px;
+  background: var(--panel);
+  padding: 12px;
+  border-right: 1px solid var(--border);
+}
+
+.new-chat-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.chat-item {
+  padding: 10px;
+  margin-top: 8px;
+  background: var(--panel-2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chat-item.active {
+  background: var(--accent);
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* MESSAGES */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* MESSAGE */
+.message {
+  margin-bottom: 10px;
+}
+
+.user {
+  text-align: right;
+}
+
+.assistant {
+  text-align: left;
+}
+
+/* INPUT */
+.input-bar {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.input-bar input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--panel-2);
+  color: white;
+}
+
+.input-bar button {
+  margin-left: 10px;
+  padding: 10px 14px;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+/* COPY / MARKDOWN */
+pre {
+  background: #0b0f19;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
